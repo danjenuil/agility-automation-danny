@@ -1,0 +1,30 @@
+<%= image_tag 'AgilityAutomation-logo-2048x645.png', width: 200 %>
+<h3>Developer Exercise</h3>
+<%= form_with do %>
+  <div class="mb-3">
+    <%= label_tag :first_name, 'First Name', class: 'form-label' %>
+    <%= text_field_tag :first_name, nil, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= label_tag :last_name, 'Last Name', class: 'form-label' %>
+    <%= text_field_tag :last_name, nil, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= label_tag :email_address, nil, class: 'form-label' %>
+    <%= email_field_tag :email_address, nil, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= label_tag :date_of_birth, 'Date of Birth', class: 'form-label' %>
+    <%= date_field_tag :date_of_birth, nil, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= label_tag :file, 'Upload a file (only PNG or PDF is accepted)', class: 'form-label' %>
+    <%= file_field_tag :file, class: 'form-control', accept: '.pdf,.png' %>
+  </div>
+
+  <%= submit_tag 'Submit', class: 'btn btn-primary'%>
+<% end %>
