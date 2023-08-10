@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root 'site#index'
+
+  resources :agility_automations, only: :create
+
+  get '/submitted', to: 'agility_automations#submission_confirmation'
 end
