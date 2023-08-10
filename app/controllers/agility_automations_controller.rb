@@ -5,7 +5,7 @@ class AgilityAutomationsController < ApplicationController
       "Last Name" => params[:last_name],
       "Email Address" => params[:email_address],
       "Date of Birth" => params[:date_of_birth],
-      "Attachment" => params[:file]
+      "Attachment" => [{ url: helpers.upload_file(params[:file])}]
     )
 
     if record.save
